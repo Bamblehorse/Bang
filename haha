@@ -9,11 +9,10 @@
  */
 
 function laugh(num){
-    var ha = "ha";
-    var haha = "";
+    var ha = "";
     for (var i = 0; i < num; i++){
-        haha = haha + ha;
+        ha = ha + "ha";
     }
-    return haha;
+    return ha + "!";
 }
-console.log(laugh(3) + "!");
+console.log(laugh(3));
