@@ -1,0 +1,33 @@
+/*
+ * Facebook Friends
+ * postMessage(message) - adds a new message string to the array
+ * deleteMessage(index) - removes the message corresponding to the index provided
+ * addFriend() - increases the friend count by 1
+ * removeFriend() - decreases the friend count by 1
+ */
+
+
+var facebookProfile = {
+    name: "John",
+    friends: 10,
+    messages: ["Msg 1","Msg 2", "Msg 3"],
+    postMessage: function(message){
+        facebookProfile.messages.push(message);
+    },
+    deleteMessage: function(index){
+        facebookProfile.messages.splice(index, 1);
+    },
+    addFriend: function(){
+        facebookProfile.friends++;
+    },
+    removeFriend: function(){
+        facebookProfile.friends--;
+    }
+};
+
+console.log(facebookProfile.postMessage("New message 1"));
+console.log(facebookProfile.messages);
+console.log(facebookProfile.deleteMessage(0));
+console.log(facebookProfile.messages);
+facebookProfile.removeFriend();
+console.log(facebookProfile.friends);
